@@ -58,14 +58,14 @@
 		],
 	];
 
-	// for ($i=0; $i < count($goods) ; $i++) { 
-	// if ($goods[$i]['price'] < 120) {
-	// 	$goods[$i]['price'] += 15;
-	// }
-	// $goods[$i]['price'] = $goods[$i]['price'] < 120 ? $goods[$i]['price'] + 15 : $goods[$i]['price'];
-	// }
+	for ($i=0; $i < count($goods) ; $i++) { 
+	if ($goods[$i]['price'] < 120) {
+		$goods[$i]['price'] += 15;
+	}
+	$goods[$i]['price'] = $goods[$i]['price'] < 120 ? $goods[$i]['price'] + 15 : $goods[$i]['price'];
+	}
 
-	// echo '<pre>'. print_r($goods, 1) . '</pre>';
+	echo '<pre>'. print_r($goods, 1) . '</pre>';
 
 	foreach ($goods as &$good) {
 		if ($good['price'] < 120) {
