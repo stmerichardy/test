@@ -37,8 +37,7 @@
 		echo $nums[$i] . '<br>';
 	}
 
-	/* Увеличьте стоимость товара на 15, если цена < 120. Решите задачу двумя способами: с помощью цикла for и цикла foreach.
-		*/
+echo "<p>Увеличьте стоимость товара на 15, если цена < 120. Решите задачу двумя способами: с помощью цикла for и цикла foreach. </p>";
 
 	$goods = [
 		[
@@ -58,14 +57,14 @@
 		],
 	];
 
-	// for ($i=0; $i < count($goods) ; $i++) { 
-	// if ($goods[$i]['price'] < 120) {
-	// 	$goods[$i]['price'] += 15;
-	// }
-	// $goods[$i]['price'] = $goods[$i]['price'] < 120 ? $goods[$i]['price'] + 15 : $goods[$i]['price'];
-	// }
+	for ($i=0; $i < count($goods) ; $i++) { 
+	if ($goods[$i]['price'] < 120) {
+		$goods[$i]['price'] += 15;
+	}
+	$goods[$i]['price'] = $goods[$i]['price'] < 120 ? $goods[$i]['price'] + 15 : $goods[$i]['price'];
+	}
 
-	// echo '<pre>'. print_r($goods, 1) . '</pre>';
+	echo '<pre>'. print_r($goods, 1) . '</pre>';
 
 	foreach ($goods as &$good) {
 		if ($good['price'] < 120) {
